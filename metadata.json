@@ -1,0 +1,6 @@
+{
+  "name": "Hasthaksh's Python Quest",
+  "description": "A cinematic comic-book-themed interactive Python 3 learning platform, IDE, and 20-class curriculum built for Hasthaksh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,355 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+    --font-comic: 'Bangers', 'Bricolage Grotesque', cursive, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF5E8;
+    background-image:
+      radial-gradient(rgba(217, 119, 6, 0.13) 1.75px, transparent 1.75px),
+      radial-gradient(rgba(2, 132, 199, 0.10) 1.75px, #FAF5E8 1.75px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    color: #0F172A;
+    overflow-x: hidden;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, textarea.font-mono, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-ligatures: none;
+  }
+}
+
+/* ============================================================================
+   EYE-FRIENDLY DAYLIGHT COMIC-BOOK PAPER THEME
+   Eliminates harsh black backgrounds & white-on-black glare across all views
+   ============================================================================ */
+.theme-comic-paper {
+  background-color: #FAF5E8 !important;
+  color: #0F172A !important;
+}
+
+/* Remap dark slate surfaces to warm comic paper & soft cream panels */
+.theme-comic-paper .bg-\[\#070B14\],
+.theme-comic-paper .bg-\[\#0B0F19\] {
+  background-color: #FAF5E8 !important;
+  background-image:
+    radial-gradient(rgba(217, 119, 6, 0.13) 1.75px, transparent 1.75px),
+    radial-gradient(rgba(2, 132, 199, 0.10) 1.75px, #FAF5E8 1.75px) !important;
+  background-size: 32px 32px !important;
+  background-position: 0 0, 16px 16px !important;
+  color: #0F172A !important;
+}
+
+.theme-comic-paper .bg-slate-900,
+.theme-comic-paper .bg-slate-900\/95,
+.theme-comic-paper .bg-slate-900\/90,
+.theme-comic-paper .bg-slate-900\/70 {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+}
+
+.theme-comic-paper .bg-slate-950,
+.theme-comic-paper .bg-slate-950\/95,
+.theme-comic-paper .bg-slate-950\/90,
+.theme-comic-paper .bg-slate-950\/70,
+.theme-comic-paper .bg-slate-950\/50 {
+  background-color: #FFFDF7 !important;
+  color: #0F172A !important;
+}
+
+.theme-comic-paper .bg-\[\#050811\],
+.theme-comic-paper .bg-\[\#090D16\] {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+.theme-comic-paper .bg-slate-800,
+.theme-comic-paper .bg-slate-800\/40 {
+  background-color: #F1F5F9 !important;
+  color: #0F172A !important;
+}
+
+.theme-comic-paper .hover\:bg-slate-800:hover,
+.theme-comic-paper .hover\:bg-slate-700:hover {
+  background-color: #E2E8F0 !important;
+}
+
+/* Remap dark gradients to warm sunlit comic hero gradients */
+.theme-comic-paper .from-slate-900 {
+  --tw-gradient-from: #FFFBEB !important;
+}
+.theme-comic-paper .via-\[\#0F1E3A\],
+.theme-comic-paper .via-\[\#0F1B33\],
+.theme-comic-paper .via-slate-900 {
+  --tw-gradient-via: #E0F2FE !important;
+}
+.theme-comic-paper .to-slate-950 {
+  --tw-gradient-to: #FEF3C7 !important;
+}
+
+/* Soft pastel comic callout boxes */
+.theme-comic-paper .bg-cyan-950\/40,
+.theme-comic-paper .bg-cyan-950\/30,
+.theme-comic-paper .bg-cyan-500\/20,
+.theme-comic-paper .bg-cyan-500\/25 {
+  background-color: #E0F2FE !important;
+  color: #0C4A6E !important;
+}
+
+.theme-comic-paper .bg-amber-950\/40,
+.theme-comic-paper .bg-amber-950\/30,
+.theme-comic-paper .bg-amber-950\/50,
+.theme-comic-paper .bg-amber-500\/10,
+.theme-comic-paper .bg-amber-500\/20 {
+  background-color: #FEF3C7 !important;
+  color: #78350F !important;
+}
+
+.theme-comic-paper .bg-emerald-950\/90,
+.theme-comic-paper .bg-emerald-950\/80,
+.theme-comic-paper .bg-emerald-950\/70,
+.theme-comic-paper .bg-emerald-950\/60,
+.theme-comic-paper .bg-emerald-950\/50,
+.theme-comic-paper .bg-emerald-950\/40,
+.theme-comic-paper .bg-emerald-950\/30,
+.theme-comic-paper .bg-emerald-500\/20 {
+  background-color: #D1FAE5 !important;
+  color: #064E3B !important;
+}
+
+.theme-comic-paper .bg-rose-950\/90,
+.theme-comic-paper .bg-rose-950\/80,
+.theme-comic-paper .bg-rose-950\/70,
+.theme-comic-paper .bg-rose-950\/60,
+.theme-comic-paper .bg-rose-950\/30,
+.theme-comic-paper .bg-rose-500\/20 {
+  background-color: #FFE4E6 !important;
+  color: #881337 !important;
+}
+
+.theme-comic-paper .bg-purple-950\/40,
+.theme-comic-paper .bg-purple-950\/30,
+.theme-comic-paper .bg-purple-500\/20,
+.theme-comic-paper .bg-purple-500\/30 {
+  background-color: #F3E8FF !important;
+  color: #581C87 !important;
+}
+
+/* Remap light-on-dark text colors to crisp, eye-friendly dark ink tones */
+.theme-comic-paper .text-white,
+.theme-comic-paper .text-slate-100 {
+  color: #0F172A !important;
+}
+
+.theme-comic-paper .text-slate-200 {
+  color: #1E293B !important;
+}
+
+.theme-comic-paper .text-slate-300 {
+  color: #334155 !important;
+}
+
+.theme-comic-paper .text-slate-400,
+.theme-comic-paper .text-slate-500 {
+  color: #475569 !important;
+}
+
+.theme-comic-paper .text-cyan-300,
+.theme-comic-paper .text-cyan-400,
+.theme-comic-paper .text-cyan-200,
+.theme-comic-paper .text-cyan-100 {
+  color: #0369A1 !important;
+}
+
+.theme-comic-paper .text-amber-300,
+.theme-comic-paper .text-amber-400,
+.theme-comic-paper .text-amber-200,
+.theme-comic-paper .text-amber-100 {
+  color: #B45309 !important;
+}
+
+.theme-comic-paper .text-emerald-300,
+.theme-comic-paper .text-emerald-400,
+.theme-comic-paper .text-emerald-200,
+.theme-comic-paper .text-emerald-100 {
+  color: #047857 !important;
+}
+
+.theme-comic-paper .text-purple-300,
+.theme-comic-paper .text-purple-200,
+.theme-comic-paper .text-purple-100 {
+  color: #6D28D9 !important;
+}
+
+.theme-comic-paper .text-rose-300,
+.theme-comic-paper .text-rose-400,
+.theme-comic-paper .text-rose-200,
+.theme-comic-paper .text-rose-100 {
+  color: #BE123C !important;
+}
+
+.theme-comic-paper .text-orange-400 {
+  color: #C2410C !important;
+}
+
+/* Remap borders to clean comic ink lines */
+.theme-comic-paper .border-slate-800,
+.theme-comic-paper .border-slate-800\/80,
+.theme-comic-paper .border-slate-800\/90,
+.theme-comic-paper .border-slate-700,
+.theme-comic-paper .border-slate-600 {
+  border-color: #CBD5E1 !important;
+}
+
+/* Comic-Book Visual Theme Utilities */
+.font-comic {
+  font-family: var(--font-comic);
+  letter-spacing: 0.05em;
+}
+
+.comic-panel {
+  border: 3px solid #1E293B;
+  box-shadow: 5px 5px 0px #1E293B;
+  background-color: #FFFFFF;
+}
+
+.comic-panel-cyan {
+  border: 3px solid #0284C7;
+  box-shadow: 5px 5px 0px #0F172A;
+  background-color: #FFFFFF;
+}
+
+.comic-panel-amber {
+  border: 3px solid #D97706;
+  box-shadow: 5px 5px 0px #0F172A;
+  background-color: #FFFDF7;
+}
+
+.comic-panel-emerald {
+  border: 3px solid #059669;
+  box-shadow: 5px 5px 0px #0F172A;
+  background-color: #FFFFFF;
+}
+
+.comic-panel-purple {
+  border: 3px solid #7C3AED;
+  box-shadow: 5px 5px 0px #0F172A;
+  background-color: #FFFFFF;
+}
+
+.comic-panel-rose {
+  border: 3px solid #E11D48;
+  box-shadow: 5px 5px 0px #0F172A;
+  background-color: #FFFFFF;
+}
+
+.comic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border: 2px solid #0F172A;
+  box-shadow: 3px 3px 0px #0F172A;
+  transform: skewX(-5deg);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.comic-btn {
+  border: 2.5px solid #0F172A;
+  box-shadow: 4px 4px 0px #0F172A;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.comic-btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #0F172A;
+}
+
+.comic-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #0F172A;
+}
+
+.comic-speech-bubble {
+  position: relative;
+  border: 3px solid #0F172A;
+  box-shadow: 5px 5px 0px #0F172A;
+  background: #FFFDF7;
+}
+
+.comic-halftone-bg {
+  background-image: radial-gradient(rgba(2, 132, 199, 0.12) 2px, transparent 2px);
+  background-size: 18px 18px;
+}
+
+.comic-halftone-amber {
+  background-image: radial-gradient(rgba(217, 119, 6, 0.14) 2px, transparent 2px);
+  background-size: 18px 18px;
+}
+
+/* Custom warm comic scrollbars */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1ECE1;
+  border-left: 1px solid #CBD5E1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 6px;
+  border: 2px solid #F1ECE1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284C7;
+}
+
+/* Printable A4 Worksheet Styles */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .worksheet-print-sheet {
+    box-shadow: none !important;
+    border: 1px solid #CBD5E1 !important;
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+    padding: 12mm !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+}

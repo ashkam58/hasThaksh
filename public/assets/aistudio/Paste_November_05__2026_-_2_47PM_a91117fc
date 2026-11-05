@@ -1,0 +1,1400 @@
+# BUILD PROMPT: HASTHAKSH'S PYTHON QUEST
+
+## 1. Product vision
+
+Build a premium, cinematic, comic-book-themed interactive Python learning platform specifically for a highly capable Grade 5 student named Hasthaksh.
+
+The application will be used by a teacher during live online classes. The teacher must be able to explain concepts, demonstrate programs, show examples and then hand over interactive coding challenges for the student to solve independently.
+
+This is NOT a conventional online course, a collection of YouTube-style lessons or a static worksheet website.
+
+It should feel like a combination of:
+- A comic-book adventure.
+- A professional coding IDE.
+- An interactive programming game.
+- A personalised tutoring environment.
+- A practical coding workbook.
+- A project-based learning laboratory.
+
+The student already knows basic Python. Do not waste the first few lessons explaining elementary concepts repeatedly. Start with an accelerated recap and quickly move to problem-solving and more advanced programming.
+
+**Programme configuration**
+
+- Student: Hasthaksh
+- Grade: 5
+- Subject: Python programming
+- Duration: 20 classes
+- Suggested lesson duration: 60 minutes, configurable by teacher.
+- Level: Intermediate foundations with advanced challenges.
+- Language: Python 3.
+- Teaching style: Explain → Demonstrate → Predict → Practise → Debug → Build.
+- Main goal: Independent computational thinking and practical programming ability.
+
+Build the complete, working application. Do not deliver just a mockup, wireframe or project proposal.
+
+---
+
+## 2. Technology requirements
+
+Use the following technology stack:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript ES6+
+- GSAP for cinematic transitions and animations.
+- Three.js only where a genuinely useful 3D environment or visual effect is appropriate.
+- Canvas API for interactive visualisations.
+- SVG for diagrams and icons.
+- CodeMirror or another lightweight browser-based editor for Python syntax highlighting.
+- Pyodide for actual Python execution inside the browser.
+- LocalStorage for saving progress.
+- Chart.js or SVG for progress visualisation.
+
+Do not use React, Next.js, Vue or Angular by default.
+
+Avoid an unnecessary backend. The core application should work locally in a browser after loading its dependencies.
+
+Use a Web Worker for Python execution where feasible. Implement execution time limits, termination of stuck programs and sensible output limits.
+
+Do not fake Python execution with JavaScript. Python programs must actually execute in a Python runtime.
+
+Support Python features used throughout this course, including:
+- print()
+- input()
+- variables and data types
+- type conversion
+- strings
+- operators
+- conditions
+- loops
+- lists
+- dictionaries
+- functions
+- random
+- math
+- basic standard-library modules
+- try and except
+
+Implement an input-values panel for programs that use input(). Let the teacher or student provide input values, one per line, and pass them to the Python program through a custom input handler.
+
+Capture standard output, error messages and execution status.
+
+Provide an obvious loading state for the first Python runtime initialisation.
+
+---
+
+## 3. Visual direction: cinematic comic-book universe
+
+Create a beautiful, polished comic-book experience.
+
+Think graphic novel meets futuristic coding academy.
+
+### Art direction
+
+- Deep midnight-blue and charcoal backgrounds.
+- Electric cyan, violet, orange and yellow accents.
+- Large comic-book-style chapter illustrations.
+- Halftone textures.
+- Dynamic speed lines.
+- Illustrated speech bubbles.
+- Thick panel outlines.
+- Dramatic chapter introductions.
+- Layered cinematic backgrounds.
+- Colourful mission cards.
+- Animated progress bars.
+- Glowing code screens.
+- Small comic-style characters and robot guides.
+- Large, readable typography.
+
+Avoid making the app look like a generic school LMS.
+
+The design should feel exciting and premium without compromising readability.
+
+### Cinematic interactions
+
+Use GSAP for:
+- Chapter opening transitions.
+- Mission unlock animations.
+- XP rewards.
+- Achievement celebrations.
+- Comic-panel entrances.
+- Progress animations.
+- Page transitions.
+- Small character reactions to completed challenges.
+
+Use subtle Three.js effects in the home screen if beneficial, such as a rotating holographic Python symbol, a futuristic mission portal or floating geometric elements.
+
+Keep all animations optional under a reduced-motion preference. Never make the interface slow or difficult to use during teaching.
+
+The application must be fully responsive, with desktop as the primary classroom experience.
+
+---
+
+## 4. Main application structure
+
+Create these sections:
+
+1. Home / Mission Control
+2. 20-Class Learning Roadmap
+3. Lesson Teaching Studio
+4. Interactive Python Playground
+5. Coding Practice Arena
+6. Quizzes and Assessments
+7. Class Activities
+8. Three Major Projects
+9. Homework Centre
+10. Progress and Achievement Dashboard
+11. Printable Worksheets
+12. Teacher Control Centre
+
+Create a persistent navigation sidebar.
+
+### Home dashboard
+
+The home screen should show:
+
+- Welcome, Hasthaksh!
+- Current class and topic.
+- Continue Learning button.
+- Total XP earned.
+- Current level.
+- Completed lessons.
+- Coding streak.
+- Badges earned.
+- Next mission.
+- Assigned homework.
+- Upcoming project.
+- Progress chart.
+- Three featured project cards.
+
+Add a large cinematic hero section titled:
+
+"HASTHAKSH: THE PYTHON CODING ADVENTURE"
+
+Subtitle:
+
+"Think like a programmer. Build like an inventor. Code your own universe."
+
+Include a Start Mission button.
+
+---
+
+## 5. Teacher Mode and Student Mode
+
+This is one of the most important requirements.
+
+Create two different operating modes.
+
+### Teacher Mode
+
+The teacher must be able to:
+
+- Open any lesson.
+- Present theory in readable comic panels.
+- Explain programming concepts.
+- Reveal and hide code solutions.
+- Run demonstration programs.
+- Show program output.
+- Use visual explanations.
+- Show the expected learning outcomes.
+- Start a class activity.
+- Set a timer.
+- Assign drills.
+- Assign homework.
+- Mark activities as completed.
+- Review student answers.
+- View the teacher answer key.
+- Add class notes.
+- Generate printable worksheets.
+- Mark a lesson complete.
+- See progress across all 20 lessons.
+
+Include a prominent "Switch to Student Mode" button.
+
+### Student Mode
+
+The student should see:
+
+- A welcoming mission introduction.
+- Simple and clear theory.
+- Interactive examples.
+- A working Python editor.
+- Coding drills.
+- Debugging missions.
+- Progress indicators.
+- Hints.
+- XP rewards.
+- Class quizzes.
+- Assigned homework.
+- Project instructions.
+
+Do not expose full solutions in student mode.
+
+Teacher solutions should remain hidden until the teacher explicitly reveals them.
+
+---
+
+## 6. Standard lesson structure
+
+Every one of the 20 lessons must use this structure.
+
+### Section A: Cinematic mission introduction
+
+Display:
+- Lesson number.
+- Mission title.
+- Comic-style illustration.
+- Story-based introduction.
+- Learning objectives.
+- Estimated class duration.
+- Difficulty level.
+- Standards covered.
+
+Introduce the topic through an interesting real-world scenario.
+
+Example for loops:
+
+"Imagine having to tell a robot to take 100 steps. Would you write 100 separate instructions? Can you teach it one instruction that repeats?"
+
+### Section B: Learn the concept
+
+Explain the concept in small, progressive sections.
+
+Each theory section should contain:
+
+1. Simple explanation.
+2. Why programmers use this concept.
+3. Real-world analogy.
+4. Python syntax.
+5. Working code example.
+6. Explanation of each important line.
+7. Expected output.
+8. Common mistakes.
+9. One quick understanding question.
+
+Do not overload one screen with too much text.
+
+Use:
+- Comic illustrations.
+- Code snippets.
+- Animated flow diagrams.
+- Interactive visualisations.
+- Step-by-step examples.
+- Prediction questions.
+
+### Section C: Live coding demonstration
+
+Give the teacher a working code editor and a demonstration area.
+
+Include buttons:
+
+- Run Code
+- Reset Code
+- Clear Output
+- Step Through
+- Show Explanation
+- Hide Explanation
+- Copy Code
+
+Allow the teacher to demonstrate code before the student attempts a challenge.
+
+### Section D: Predict the output
+
+Before executing selected code examples, ask Hasthaksh to predict the result.
+
+Display the code and offer a prediction input.
+
+After submission, reveal the actual output and provide an explanation.
+
+Include more difficult tracing exercises as the course progresses.
+
+### Section E: Guided practice
+
+Provide progressive challenges:
+
+- Level 1: Warm-up.
+- Level 2: Core challenge.
+- Level 3: Independent coding.
+- Level 4: Advanced boss challenge.
+
+The student should progress by solving problems, not merely clicking multiple-choice answers.
+
+### Section F: Class activity
+
+Every lesson needs at least one engaging class activity.
+
+Each activity must include:
+
+- Activity title.
+- Objective.
+- Materials or code required.
+- Teacher instructions.
+- Student instructions.
+- Time limit.
+- Expected outcome.
+- Reflection question.
+
+Make activities practical and suitable for a one-to-one live tutoring session.
+
+### Section G: Debugging challenge
+
+Give the student an intentionally broken Python program.
+
+Ask them to:
+1. Read the program.
+2. Predict what is wrong.
+3. Identify the bug.
+4. Correct the code.
+5. Run the corrected version.
+6. Explain the correction.
+
+Provide hints, but do not immediately reveal the solution.
+
+### Section H: Exit quiz
+
+Each lesson should finish with a short quiz of 5–8 questions.
+
+Use different question types:
+- Multiple choice.
+- Predict the output.
+- Identify the error.
+- Fill in missing code.
+- Arrange instructions.
+- Short written explanation.
+- Small coding question.
+
+Give immediate feedback and explanations.
+
+---
+
+## 7. Complete 20-class curriculum and lesson content
+
+Populate every lesson with actual teaching content. Do not leave placeholder lessons.
+
+### PHASE 1: PYTHON FOUNDATIONS
+
+**CLASS 1: Python Power-Up**
+
+Combine the introduction and variables lessons into one accelerated session.
+
+Topics:
+- Quick revision of print().
+- Comments.
+- Variables and naming rules.
+- int, float, str and bool.
+- Assigning and updating values.
+- input().
+- Type conversion.
+- Arithmetic operators.
+- Expressions.
+- Order of operations.
+
+Class activity: Build a Superhero Identity Generator.
+
+Hasthaksh enters a character name, age, power, strength level and favourite gadget. Python combines the information to create an interactive superhero profile.
+
+Practice:
+- Predict variable values.
+- Fix naming mistakes.
+- Convert between data types.
+- Calculate shopping totals.
+- Create a simple calculator.
+- Build a personalised information program.
+
+Add a short diagnostic at the beginning. If Hasthaksh already masters the basics, unlock extension challenges instead of repeating elementary instruction.
+
+**CLASS 2: String Detective**
+
+Topics:
+- String creation.
+- Indexing.
+- Negative indexing.
+- Slicing.
+- String length.
+- upper(), lower(), strip(), replace(), find().
+- String concatenation.
+- f-strings.
+
+Class activity: Secret Message Decoder.
+
+Practice:
+- Extract characters.
+- Reverse words.
+- Correct messy user input.
+- Build username generators.
+- Create a simple message encoder.
+- Find letters in a sentence.
+
+Boss challenge: Create a username generator from a person's first name, last name and a chosen number.
+
+**CLASS 3: Algorithm Architect**
+
+Topics:
+- What is an algorithm?
+- Computational thinking.
+- Problem decomposition.
+- Sequencing.
+- Pseudocode.
+- Flowcharts.
+- Trace tables.
+- Identifying inputs, processes and outputs.
+
+Class activity: Robot Mission Control.
+
+Hasthaksh gives a fictional robot precise instructions to navigate a room. Include an interactive instruction-ordering challenge.
+
+Practice:
+- Arrange steps correctly.
+- Find ambiguous instructions.
+- Break large problems into smaller ones.
+- Trace simple algorithms.
+- Convert pseudocode into Python.
+- Design algorithms for everyday activities.
+
+Boss challenge: Design an algorithm for an automatic vending machine.
+
+### PHASE 2: DECISION-MAKING
+
+**CLASS 4: Decision Engine**
+
+Topics:
+- if statements.
+- else statements.
+- elif.
+- Indentation.
+- Comparison operators.
+- Conditions.
+- Branching programs.
+
+Class activity: Build a Smart Quiz Grader.
+
+Practice:
+- Predict which branch executes.
+- Complete missing conditions.
+- Fix indentation errors.
+- Create an age-based program.
+- Write a grading system.
+- Develop a discount calculator.
+
+**CLASS 5: Logic Master**
+
+Topics:
+- and.
+- or.
+- not.
+- Boolean expressions.
+- Truth tables.
+- Nested if statements.
+- Combining conditions.
+
+Class activity: Secret Laboratory Access System.
+
+Students must satisfy different conditions to unlock a fictional laboratory.
+
+Practice:
+- Evaluate logical expressions.
+- Complete truth tables.
+- Fix incorrect conditions.
+- Build eligibility checkers.
+- Create a multi-condition adventure.
+
+Boss challenge: Create a three-stage security access program.
+
+### PHASE 3: LOOP MASTERY
+
+**CLASS 6: Loop Factory**
+
+Topics:
+- for loops.
+- range().
+- Start, stop and step.
+- Iterating over strings.
+- Repetition.
+
+Class activity: Multiplication Table Generator.
+
+Practice:
+- Generate number sequences.
+- Count backwards.
+- Display multiples.
+- Calculate sums.
+- Generate multiplication tables.
+- Fix loop boundaries.
+
+**CLASS 7: Countdown Mission**
+
+Topics:
+- while loops.
+- Loop conditions.
+- Updating counters.
+- break.
+- continue.
+- Infinite loops.
+
+Class activity: Rocket Launch Countdown.
+
+Practice:
+- Countdown timers.
+- Number guessing.
+- Password attempts.
+- Repeated user input.
+- Fix infinite loops.
+- Predict how many iterations execute.
+
+**CLASS 8: Pattern Generator**
+
+Topics:
+- Nested loops.
+- Rows and columns.
+- Repetition inside repetition.
+- Number patterns.
+- Star patterns.
+- Grid generation.
+
+Class activity: Create a Pattern Factory.
+
+Let the learner choose pattern size and generate different arrangements.
+
+Practice:
+- Square patterns.
+- Number pyramids.
+- Multiplication grids.
+- Nested-loop tracing.
+- Modify existing patterns.
+
+Boss challenge: Generate a custom multiplication grid.
+
+### PHASE 4: DATA AND FUNCTIONS
+
+**CLASS 9: Data Backpack**
+
+Topics:
+- Creating lists.
+- Accessing elements.
+- Indexing.
+- Updating elements.
+- Adding and removing items.
+- List length.
+
+Class activity: Build a Shopping Inventory.
+
+Practice:
+- Create shopping lists.
+- Update scores.
+- Remove elements.
+- Access specific values.
+- Find list length.
+- Correct indexing mistakes.
+
+**CLASS 10: Data Detective**
+
+Topics:
+- append().
+- insert().
+- remove().
+- pop().
+- sort().
+- reverse().
+- Traversing lists.
+- Searching lists.
+- Filtering values.
+- Finding minimum and maximum values.
+
+Class activity: Build a Sports Leaderboard.
+
+Practice:
+- Find highest scores.
+- Find lowest scores.
+- Search for a name.
+- Filter even numbers.
+- Calculate totals and averages.
+- Analyse a class score list.
+
+Include a cumulative checkpoint quiz.
+
+**CLASS 11: Function Factory**
+
+Topics:
+- What functions are.
+- Defining functions.
+- Calling functions.
+- Parameters.
+- Arguments.
+- Reusable code.
+
+Class activity: Create a Mathematical Toolbox.
+
+Functions for addition, subtraction, multiplication and division.
+
+Practice:
+- Write simple functions.
+- Add parameters.
+- Reuse functions.
+- Fix missing arguments.
+- Convert repeated code into functions.
+
+**CLASS 12: Modular Programmer**
+
+Topics:
+- return.
+- print versus return.
+- Parameters.
+- Multiple parameters.
+- Local and global variables.
+- Variable scope.
+- Breaking problems into reusable modules.
+
+Class activity: Build a Smart Calculator using functions.
+
+Practice:
+- Write functions that calculate values.
+- Return results.
+- Debug scope errors.
+- Divide a complex problem into smaller functions.
+
+**CLASS 13: Dictionary Database**
+
+Topics:
+- Dictionaries.
+- Key-value pairs.
+- Reading values.
+- Updating records.
+- Adding keys.
+- Removing keys.
+- Iterating through dictionaries.
+- Combining lists and dictionaries.
+
+Class activity: Build a Student Profile Database.
+
+Store fictional student names, subjects, marks and achievements.
+
+Practice:
+- Create records.
+- Update marks.
+- Retrieve information.
+- Search for a key.
+- Calculate student totals.
+- Build simple data catalogues.
+
+**CLASS 14: Randomness Lab**
+
+Topics:
+- import.
+- random module.
+- random.randint().
+- random.choice().
+- Random game events.
+- Combining conditions, loops and functions.
+
+Class activity: Dice Battle.
+
+Create a dice-based competition between the player and the computer.
+
+Practice:
+- Generate random numbers.
+- Simulate dice rolls.
+- Build a lucky number game.
+- Create random maths questions.
+- Build a computer opponent.
+
+**CLASS 15: Algorithm Lab**
+
+Topics:
+- Linear search.
+- Finding an item in a list.
+- Comparing values.
+- Basic sorting ideas.
+- Bubble sort as an enrichment topic.
+- Counting and basic data analysis.
+- Comparing possible solutions.
+
+Class activity: Find the Hidden Treasure.
+
+Students search through a collection of values using logical steps.
+
+Practice:
+- Manually trace a linear search.
+- Write a simple searching function.
+- Find duplicate values.
+- Compare unsorted and sorted data.
+- Explain why one solution uses more steps than another.
+
+**CLASS 16: Debugging Academy**
+
+Topics:
+- Syntax errors.
+- Runtime errors.
+- Logic errors.
+- Testing.
+- Edge cases.
+- try and except.
+- Error messages.
+- Improving code quality.
+
+Class activity: The Bug Hunter Challenge.
+
+Present broken programs and ask Hasthaksh to diagnose and repair them.
+
+Practice:
+- Correct syntax errors.
+- Repair logic errors.
+- Test unusual inputs.
+- Handle invalid inputs.
+- Improve program structure.
+- Explain the cause of an error.
+
+### PHASE 5: THREE MAJOR PROJECTS
+
+**CLASS 17: PROJECT 1 - QUIZ MASTER**
+
+Build an interactive quiz application.
+
+**CLASS 18: PROJECT 2 - TREASURE MAZE**
+
+Build a command-line adventure game using loops, conditions and lists.
+
+**CLASS 19: PROJECT 3 - ROCK, PAPER, SCISSORS LEAGUE**
+
+Build a computer-opponent game with randomisation and score tracking.
+
+**CLASS 20: GRAND SHOWCASE**
+
+Hasthaksh demonstrates all three projects, explains the code and completes a final independent coding assessment.
+
+---
+
+## 8. Practice engine: a very large question bank
+
+This is a critical requirement.
+
+Create at least 12 individually authored practice items for every lesson.
+
+Across 20 classes, this means at least 240 actual practice items.
+
+For each lesson create:
+
+- 3 quick warm-up questions.
+- 3 predict-the-output challenges.
+- 2 code-completion challenges.
+- 2 debugging challenges.
+- 1 independent coding exercise.
+- 1 advanced boss challenge.
+
+Provide 3 additional homework tasks per lesson.
+
+Every exercise must include:
+
+1. Unique exercise ID.
+2. Exercise title.
+3. Difficulty.
+4. Instructions.
+5. Starter code, where relevant.
+6. Input examples.
+7. Expected output or test conditions.
+8. Hidden solution for the teacher.
+9. Progressive hints.
+10. Marking criteria.
+11. Explanation of the correct solution.
+
+Do not recycle the same question with only different numbers.
+
+Make problems varied, practical, age-appropriate and increasingly difficult.
+
+Use realistic contexts: toys, games, football scores, shopping, animals, space exploration, treasure hunting, superheroes, school activities, robots and puzzles.
+
+### Adaptive difficulty
+
+If the student gets questions correct consistently, unlock harder challenges.
+
+If the student struggles, provide:
+- A smaller example.
+- A visual explanation.
+- A simpler scaffold.
+- A helpful hint.
+- Another practice question.
+
+Never reveal the answer immediately after an incorrect attempt.
+
+---
+
+## 9. Three major projects with boilerplate
+
+Build a dedicated project studio with three large project cards.
+
+Each project must have:
+- Cinematic introduction.
+- Project objectives.
+- Skills being practised.
+- Detailed task instructions.
+- Working Python editor.
+- Starter boilerplate.
+- TODO markers.
+- Step-by-step milestones.
+- Hints.
+- Run and test controls.
+- Teacher solution.
+- Acceptance checklist.
+- Stretch challenges.
+- Final presentation checklist.
+
+### PROJECT 1: QUIZ MASTER
+
+**Mission:** Build your own quiz application.
+
+Skills:
+- Variables.
+- Lists.
+- Dictionaries.
+- Loops.
+- Conditions.
+- Functions.
+- Score calculation.
+
+Features required:
+- At least five questions.
+- Four answer options.
+- User input.
+- Correct and incorrect feedback.
+- Score tracking.
+- Final score.
+- Option to play again.
+
+Starter boilerplate:
+
+```python
+questions = [
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["A. Earth", "B. Mars", "C. Venus", "D. Jupiter"],
+        "answer": "B"
+    },
+    {
+        "question": "Which language are we learning?",
+        "options": ["A. HTML", "B. CSS", "C. Python", "D. SQL"],
+        "answer": "C"
+    }
+]
+
+score = 0
+
+def ask_question(question_data):
+    # TODO 1: Display the question.
+    # TODO 2: Display all options.
+    # TODO 3: Ask the user for an answer.
+    # TODO 4: Compare the answer.
+    # TODO 5: Return whether the answer is correct.
+    pass
+
+
+def run_quiz():
+    global score
+
+    # TODO 6: Loop through the question list.
+    # TODO 7: Update the score.
+    # TODO 8: Show the final result.
+    pass
+
+
+run_quiz()
+```
+
+**Student instructions**
+
+1. Understand the question data structure.
+2. Complete the ask_question() function.
+3. Display all answer choices.
+4. Capture the user's answer.
+5. Compare it with the stored correct answer.
+6. Award points.
+7. Complete the main quiz loop.
+8. Display a final result.
+
+**Stretch goals**
+
+- Add difficulty levels.
+- Add more questions.
+- Track the highest score.
+- Add a restart option.
+- Create a question category system.
+- Display percentage marks.
+
+### PROJECT 2: TREASURE MAZE
+
+**Mission:** Navigate a maze, avoid walls and discover hidden treasure.
+
+Skills:
+- Lists.
+- Nested lists.
+- Conditions.
+- Loops.
+- Functions.
+- Coordinates.
+- Logical thinking.
+
+Features required:
+- A grid-based maze.
+- Player starting position.
+- Walls.
+- Treasure.
+- Movement commands.
+- Move counter.
+- Winning condition.
+- Invalid movement handling.
+
+Starter boilerplate:
+
+```python
+maze = [
+    ["#", "#", "#", "#", "#", "#", "#"],
+    ["#", "S", ".", ".", "#", "T", "#"],
+    ["#", ".", "#", ".", ".", ".", "#"],
+    ["#", ".", ".", ".", "#", ".", "#"],
+    ["#", "#", "#", "#", "#", "#", "#"]
+]
+
+player_row = 1
+player_col = 1
+moves = 0
+found_treasure = False
+
+
+def show_maze():
+    # TODO 1: Display the maze.
+    # TODO 2: Show the player in the current position.
+    pass
+
+
+def move_player(command):
+    global player_row, player_col, moves
+
+    # TODO 3: Calculate the next position.
+    # TODO 4: Check whether it is inside a wall.
+    # TODO 5: Update the player's position.
+    # TODO 6: Increase the move counter.
+    pass
+
+
+print("TREASURE MAZE")
+print("Use W, A, S, D to move.")
+
+# TODO 7: Create the main game loop.
+# TODO 8: Display the maze after each move.
+# TODO 9: Check whether the player finds treasure.
+# TODO 10: Display the winning message.
+```
+
+**Student instructions**
+
+1. Understand how the maze is represented.
+2. Identify the player's starting coordinates.
+3. Complete the function that displays the maze.
+4. Understand the four movement directions.
+5. Calculate the next row and column.
+6. Prevent movement into walls.
+7. Keep track of moves.
+8. Stop the game when treasure is found.
+
+**Stretch goals**
+
+- Add more treasure.
+- Add a limited number of moves.
+- Add a scoring system.
+- Introduce traps.
+- Allow different maze layouts.
+- Add a difficulty selector.
+
+The game must display useful instructions when an invalid move is entered.
+
+### PROJECT 3: ROCK, PAPER, SCISSORS LEAGUE
+
+**Mission:** Build a game where Hasthaksh competes against the computer.
+
+Skills:
+- Random module.
+- Functions.
+- Conditions.
+- Loops.
+- Variables.
+- Score tracking.
+
+Features required:
+- Player chooses rock, paper or scissors.
+- Computer randomly chooses.
+- Game determines the winner.
+- First to a configurable number of points wins.
+- Show the scoreboard after each round.
+
+Starter boilerplate:
+
+```python
+import random
+
+choices = ["rock", "paper", "scissors"]
+
+player_score = 0
+computer_score = 0
+
+
+def find_winner(player, computer):
+
+    # TODO 1: Check whether both choices are equal.
+    # TODO 2: Check winning combinations.
+    # TODO 3: Return "player", "computer" or "tie".
+    pass
+
+
+def play_game():
+
+    global player_score, computer_score
+
+    rounds = 5
+
+    for round_number in range(1, rounds + 1):
+
+        print("ROUND", round_number)
+
+        # TODO 4: Ask for the player's choice.
+        # TODO 5: Generate the computer's choice.
+        # TODO 6: Display both choices.
+        # TODO 7: Call find_winner().
+        # TODO 8: Update the scoreboard.
+
+    # TODO 9: Display the final winner.
+
+
+play_game()
+```
+
+**Student instructions**
+
+1. Understand the random module.
+2. Complete the winning logic.
+3. Generate a computer choice.
+4. Capture player input.
+5. Compare both choices.
+6. Award points.
+7. Repeat for five rounds.
+8. Display the winner.
+
+**Stretch goals**
+
+- Best of 3, 5 or 10 rounds.
+- Custom player name.
+- Keep a record of wins and losses.
+- Add a rematch option.
+- Add a tournament mode.
+- Add statistics showing player win percentage.
+
+All three projects must be presented as progressive building experiences. Do not simply display completed code and ask the student to copy it.
+
+Provide the starter version to the student and keep the completed reference solution in teacher mode.
+
+---
+
+## 10. Quizzes and formal assessments
+
+Create a quiz centre.
+
+### Lesson exit quizzes
+
+Every class must have 5–8 questions.
+
+### Mid-course checkpoint
+
+After Class 10:
+- 15 questions.
+- Cover strings, algorithms, conditionals, loops and lists.
+- Include code tracing.
+- Include debugging.
+- Include a practical coding question.
+
+### Final assessment
+
+After Class 20:
+- 15 objective questions.
+- 5 code-tracing questions.
+- 3 debugging questions.
+- 2 independent coding challenges.
+
+Total: 25 assessment items.
+
+Display:
+- Marks obtained.
+- Percentage.
+- Concepts mastered.
+- Concepts needing revision.
+- Time taken.
+- Teacher remarks.
+
+Do not grade purely by multiple-choice questions. Independent coding and reasoning must carry meaningful weight.
+
+---
+
+## 11. Homework centre
+
+Each lesson should have three homework tasks.
+
+1. Core practice: Demonstrate understanding of the lesson.
+2. Creative task: Use the new concept to build something original.
+3. Challenge task: Solve a more difficult programming problem.
+
+Features:
+- Assign homework from Teacher Mode.
+- Mark assignments as pending or submitted.
+- Allow students to submit code.
+- Run and test submissions.
+- Provide student self-reflection.
+- Allow teacher feedback.
+- Show the submission date.
+- Track completion.
+- Print homework sheets.
+
+Generate a homework worksheet for every lesson.
+
+### Printable worksheet
+
+Use a clean, ink-friendly A4 layout with:
+- Student name.
+- Class number.
+- Date.
+- Topic.
+- Learning objectives.
+- Practice questions.
+- Coding exercises.
+- Space for handwritten answers.
+- Homework challenge.
+- Teacher feedback area.
+
+Allow the teacher to print:
+- Student worksheet.
+- Teacher solution sheet.
+- Quiz paper.
+- Answer key.
+
+Implement proper print CSS. The student answer sheet and teacher answer key must be separate.
+
+---
+
+## 12. Standards alignment
+
+This course must be standards-informed for Grade 5.
+
+Use these references as the basis for the curriculum mapping:
+
+**A. England National Curriculum: Computing, Key Stage 2**
+
+Address:
+- Designing, writing and debugging programs.
+- Decomposition of problems.
+- Sequence, selection and repetition.
+- Variables.
+- Input and output.
+- Logical reasoning.
+- Testing and correcting algorithms.
+- Creating programs and digital artefacts.
+- Responsible and safe use of technology.
+
+**B. CSTA 2026 PK–12 Computer Science Standards, Grade 5**
+
+Map relevant learning outcomes to:
+- Algorithms & Design.
+- Programming.
+- Data & Analysis.
+- Systems & Security.
+- Computing & Society.
+
+Integrate the CSTA practices:
+- Computational thinking.
+- Testing and refinement.
+- Communication about computing.
+- Inclusive collaboration.
+- Ethics and social responsibility.
+- Human-centred design.
+
+Show a standards mapping page in the application.
+
+For every lesson, display:
+- Standard area.
+- Learning outcome.
+- Related lesson activity.
+- Assessment evidence.
+- Mastery indicator.
+
+Do not falsely claim official certification or accreditation. Show that this programme is informed by the referenced standards and identify outcomes that are covered, introduced or outside the scope of this Python course.
+
+Include responsible computing reminders, such as protecting personal information, respecting other people's work and testing programs carefully.
+
+---
+
+## 13. Gamification and reward system
+
+Create a progression system.
+
+Suggested levels:
+
+1. Python Explorer.
+2. Variable Wizard.
+3. Logic Detective.
+4. Loop Master.
+5. Data Champion.
+6. Function Engineer.
+7. Debugging Ninja.
+8. Game Developer.
+9. Python Champion.
+
+Award XP for:
+- Completing theory.
+- Passing quizzes.
+- Solving coding drills.
+- Fixing bugs.
+- Completing homework.
+- Building projects.
+- Explaining code independently.
+
+Add collectible badges:
+- First Program.
+- Input Master.
+- Logic Legend.
+- Loop Architect.
+- List Explorer.
+- Function Builder.
+- Bug Hunter.
+- Project Creator.
+- Python Champion.
+
+Avoid giving rewards merely for opening a page or repeatedly clicking buttons. Reward actual learning achievements.
+
+---
+
+## 14. Progress and teacher analytics
+
+Create a teacher dashboard with:
+
+- Overall course completion.
+- Completed lessons.
+- Practice accuracy.
+- Number of challenges attempted.
+- Number of challenges solved independently.
+- Quiz scores.
+- Homework completion.
+- Project completion.
+- Most difficult concepts.
+- Concepts requiring revision.
+- Student improvement over time.
+
+Include a chart for assessment progression.
+
+Distinguish between:
+- Solved independently.
+- Solved with hints.
+- Solved after seeing an example.
+- Not yet mastered.
+
+Allow teacher notes after each lesson.
+
+Allow progress data to be exported as JSON and imported later. Do not claim automatic syncing between devices unless a real backend is implemented.
+
+---
+
+## 15. UI and user experience requirements
+
+Make every section visually connected to the same comic universe.
+
+Use:
+- Large chapter numbers.
+- Clear lesson cards.
+- Dramatic mission titles.
+- Animated chapter maps.
+- Colour-coded difficulty levels.
+- Distinct coding challenge cards.
+- Well-designed code panels.
+- Clearly visible output and errors.
+- Large, accessible interactive controls.
+
+The code editor should be a central element of practice pages.
+
+Recommended desktop layout:
+
+LEFT: Lesson navigation and mission progress.
+
+CENTRE: Theory, activity or coding challenge.
+
+RIGHT: Python editor and output console.
+
+Provide an expandable full-screen coding area.
+
+Make sure the teacher can quickly move between theory, example, practice, homework and quiz without losing the current lesson.
+
+Do not make the interface cluttered. Prioritise teaching usability and readability.
+
+---
+
+## 16. Saving and persistence
+
+Use LocalStorage to save:
+
+- Completed lessons.
+- Quiz scores.
+- Practice attempts.
+- Unlocked badges.
+- XP.
+- Homework status.
+- Teacher notes.
+- Project progress.
+- Last opened lesson.
+- Student settings.
+
+Provide:
+- Export progress.
+- Import progress.
+- Reset student progress with confirmation.
+
+Avoid losing student work when navigating between pages.
+
+---
+
+## 17. Required deliverables
+
+Build the complete application, including:
+
+1. Home dashboard.
+2. 20 complete lessons.
+3. Actual theory content.
+4. Working Python code editor.
+5. Real Python execution.
+6. At least 240 practice items.
+7. At least 60 homework tasks.
+8. 20 class activities.
+9. Lesson exit quizzes.
+10. Mid-course assessment.
+11. Final assessment.
+12. Three complete project studios.
+13. Working starter boilerplates.
+14. Hidden teacher solutions.
+15. Printable worksheets.
+16. Standards mapping.
+17. Teacher and student modes.
+18. Progress dashboard.
+19. XP and badges.
+20. Responsive cinematic interface.
+
+### Final quality requirements
+
+- No dead buttons.
+- No empty lesson pages.
+- No placeholder questions.
+- No duplicated exercises masquerading as a question bank.
+- No simulated Python execution.
+- No exposed student answer keys.
+- No loss of saved progress.
+- No horizontal overflow on common screens.
+- No unreadable comic-style text.
+- All major features must be tested.
+
+Build the working product first. Focus on actual teaching functionality, meaningful coding practice and polished visual design.
+
+The final experience should make Hasthaksh excited to open the application, learn a concept, solve a difficult challenge and proudly demonstrate what he has built.
+
+**Final product name: HASTHAKSH'S PYTHON QUEST**
+
+Tagline: "Every great programmer starts with a question. What will you build today?"
